@@ -8,9 +8,9 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
+    box-sizing: border-box !important;
+    list-style-type: none !important;
+    text-decoration: none !important;
     scroll-behavior: smooth;
     transition: all 300ms;
 }
@@ -19,6 +19,7 @@
     /* =============================font-sizes======================= */
     --xl: 68px;
     --lg: 49px;
+    --bais: 30px;
     --md: 20px;
     --sm: 16px;
     /* --fs-xs: 22px; */
@@ -53,6 +54,10 @@
     font-size: var(--sm);
 }
 
+.fs-baise {
+    font-size: var(--bais);
+}
+
 /* =========================font-weight================================ */
 .fw-semibold {
     font-weight: var(--samibold);
@@ -73,6 +78,10 @@
     color: var(--color-primary);
 }
 
+.color-secondary {
+    color: var(--color-secondary);
+}
+
 .color-dark {
     color: var(--color-dark);
 }
@@ -82,3 +91,117 @@
 }
 
 /* =========================Root-define================================ */
+
+/* ==============================navbar====================== */
+.btn-exp {
+    padding: 9px 41px;
+    background-color: #D80000;
+    border: none;
+}
+
+/* ===========================hover ===========================*/
+
+.slick-prev .slick-arrow {
+    background-image: url(../image/png/prev.png);
+}
+
+/* ===========================cards=========================== */
+.h-100vh {
+    min-height: 100vh;
+}
+
+.post {
+    height: 100%;
+    background: #F7F8FA;
+    border-radius: 20px;
+}
+
+.post a {
+    padding: 6px 20px 7px 19px;
+    border-radius: 39px;
+}
+
+.post h3 {
+    line-height: 45px;
+}
+
+/* IMAGE-GELLARY-CSS */
+.d-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.model {
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    height: 100%;
+}
+
+.grid-item {
+    position: relative;
+    transition: all 600ms ease-in-out;
+    /* width: 100%; */
+    object-fit: cover;
+    -o-object-fit: cover;
+    height: 100%;
+}
+
+/* .grid-item:hover {} */
+
+.grid-item:hover::after {
+    position: absolute;
+    content: "";
+    padding: 2em .5em;
+    border: 2px solid white;
+    /* width: 100%;
+    height: 100%; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: .5;
+    z-index: 99;
+    background-image: url("../image/png/instaicon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.item-1 {
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+
+.item-2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.item-3 {
+    grid-column: 3/4;
+    grid-row: 1/5;
+}
+
+.item-4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+.item-5 {
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+.item-6 {
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+
+.item-7 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
